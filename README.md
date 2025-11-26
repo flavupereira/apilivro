@@ -39,7 +39,10 @@ public record AutorDTO(String nome, String nascimento, Date Aano_falecimento)
 
 ## LivroDTO
 Record para transferência de dados do livro:
-``` public record LivroDTO(String titulo, String autor, String idioma, int numero_Downloads) ```
+
+```
+public record LivroDTO(String titulo, String autor, String idioma, int numero_Downloads)
+```
 
 # 🗃️ Repositórios
 
@@ -62,10 +65,12 @@ Record para transferência de dados do livro:
 
 2. Configure as propriedades de conexão no application.properties:
 
-```spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update ```
+spring.jpa.hibernate.ddl-auto=update
+```
 
 ## Exemplo de Endpoints:
 **Autores:**
