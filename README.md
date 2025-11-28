@@ -34,30 +34,31 @@ Esta é uma aplicação Spring Boot que fornece endpoints para operações CRUD 
 
 ### AutorDTO
 Record para transferência de dados do autor:
-```java
-public record AutorDTO(String nome, String nascimento, Date Aano_falecimento)
 
+```
+java
+public record AutorDTO(String nome, String nascimento, Date Aano_falecimento)
+```
 ## LivroDTO
 Record para transferência de dados do livro:
 
-```
 public record LivroDTO(String titulo, String autor, String idioma, int numero_Downloads)
-```
 
-# 🗃️ Repositórios
+
+## 🗃️ Repositórios
 
 - AutorRepository - Interface JPA para operações com a entidade Autor
 
 - LivroRepository - Interface JPA para operações com a entidade Livro
 
-# 🔧 Configuração e Execução
+## 🔧 Configuração e Execução
 
 *Pré-requisitos*
  -Java 21
 
--Maven 3.6+
+- Maven 3.6+
 
--PostgreSQL
+- PostgreSQL
 
 ##Configuração do Banco de Dados
 
@@ -70,29 +71,31 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
+
 ```
 
 ## Exemplo de Endpoints:
+
 **Autores:**
 
-GET /autores - Lista todos os autores
+- GET /autores - Lista todos os autores
 
-GET /autores/{id} - Busca autor por ID
+- GET /autores/{id} - Busca autor por ID
 
-POST /autores - Cria um novo autor
+- POST /autores - Cria um novo autor
 
-PUT /autores/{id} - Atualiza um autor
+- PUT /autores/{id} - Atualiza um autor
 
-DELETE /autores/{id} - Remove um autor
+- DELETE /autores/{id} - Remove um autor
 
 **Livros:**
 
-GET /livros - Lista todos os livros
+- GET /livros - Lista todos os livros
 
-GET /livros/{id} - Busca livro por ID
+- GET /livros/{id} - Busca livro por ID
 
-POST /livros - Cria um novo livro
+- POST /livros - Cria um novo livro
 
-PUT /livros/{id} - Atualiza um livro
+- PUT /livros/{id} - Atualiza um livro
 
-DELETE /livros/{id} - Remove um livro
+- DELETE /livros/{id} - Remove um livro
